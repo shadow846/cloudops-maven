@@ -17,12 +17,11 @@ pipeline {
                 sh 'mvn clean install'
             }
         }
-    stage('Docker Build') {
-	steps{
-	    script{
-		docker.build("shadow846/cloudops-maven:latest")
-	    }
+
+        stage('Docker Build') {
+            steps {
+                sh 'docker build -t shadow846/cloudops-maven:latest .'
+            }
         }
-     }
-  }
+    }
 }
