@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git credentialsId: 'github-creds', url: 'https://github.com/YOUR_USERNAME/cloudops-maven.git'
+                git credentialsId: 'github-creds', url: 'https://github.com/shadow846/cloudops-maven.git'
             }
         }
 
